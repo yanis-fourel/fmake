@@ -10,7 +10,11 @@ Is GNU Make already a 'functional language' ?
 
 # Why not just `Make`
 
-TODO: Proove that `make` is too limited
+TODO: Prove that `make` is too limited
+example: compiling a lib with a flag that makes it non-compatible. This forces to rebuild with -B if we change the flag, to make sure the entire lib was built correctly. This is against the fundamental concept of only building what needs to be rebuilt
+
+Maybe we could elegantly generate static and dynamic version of a lib ? This currently doesn't feel like a problem, but it may still be heavily hindered by useless logical constraint of Make
+
 
 
 # How does it work
@@ -182,9 +186,10 @@ SRCDIR = ^DIR .. "/src"
 OBJDIR = ^DIR .. "/obj"
 
 SRC = SRCDIR .. "main.c"
-OBJ = pathsubst js sais plus
+OBJ = pathsubst_js_sais_plus
 
-a.out: OBJ, SomethingElse   # NOTE: that would probably require comma separation of lists. This kind of goes in the way of functions. `functionnal make` could be a thing. `fmake`
+a.out: OBJ, SomethingElse   # NOTE: that would probably require comma separation of lists. This kind of goes in the way of functions.
+	# but then what syntax here...
 ```
 
 ## Typing (?)
@@ -201,3 +206,9 @@ Types:
 Could it prevent some mistakes ?
 need examples
 
+## misc
+
+Multi-line varible definition without the fucking backslash I always forget to put at the end \
+	of \
+	the \
+	line
