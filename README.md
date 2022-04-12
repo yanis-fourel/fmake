@@ -208,7 +208,7 @@ need examples
 
 ## misc
 
-Multi-line varible definition without the fucking backslash I always forget to put at the end \
-	of \
-	the \
+Multi-line varible definition without the fucking backslash I always forget to put at the end \\
+	of \\
+	the \\
 	line
