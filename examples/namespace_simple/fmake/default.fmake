@@ -1,0 +1,14 @@
+
+import "mylib/mylib.fmake" as mylib
+
+SRCDIR=$^(DIR)/src
+SRC=$(SRCDIR)main.c
+OBJ=$(SRC:.c=.o)
+
+NAME=$^(DIR)hello_world
+
+$(NAME): $(mylib.STATIC) $(OBJ)
+	$(CC) $(OBJ) -o $@ -I $(mylib.INCDIR) $(mylib.STATIC)
+
+clean: $(mylib.clean)
+	rm -f $(OBJ)

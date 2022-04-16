@@ -1,0 +1,18 @@
+
+STATIC=$^(DIR)/mylib.a
+INCDIR=$^(DIR)/mylib
+
+SRCDIR=$^(DIR)/src
+SRC=$(SRCDIR)mylib.c
+
+OBJ=$(SRC:.c=.o)
+
+$(STATIC): $(OBJ)
+	ar rcs $@ $(OBJ)
+
+.c.o:
+	$(CC) -c $^ -o $@ -I $(INCDIR)
+
+clean:
+	rm -f $(OBJ)
+
