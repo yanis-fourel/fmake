@@ -5,8 +5,8 @@
 current_dir_ :=.
 
 NAMESPACE__:=mylib__
-include mylib/Makefile
-NAMESPACE__:=
+include mylib/mylib.mk
+#TODO: properly 'pop' the namespace, respecting possible nested namespaces
 
 SRCDIR=$(current_dir_)/src
 SRC=$(SRCDIR)/main.c
