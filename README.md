@@ -6,7 +6,7 @@ This document explains all the features with examples. See [implementation.md](i
 
 I just chose the name `fmake`, standing for "functional Make". The goal of this language is to repace Make by providing the same low-level `sh` script control over how everything is make, while providing a more abstract functionnal flavored layer to allow projects to scale and reference each other safely.
 
-TODO: develop why a functional paradygm is perfect for a build system.
+TODO: develop why a functional paradigm is perfect for a build system.
 Is GNU Make already a 'functional language' ?
 
 
